@@ -1,0 +1,51 @@
+# Build directories
+build/
+cmake-build-*/
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.suo
+*.user
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Results
+results/*.json
+results/*.csv
+!results/.gitkeep
+
+# Data (large files)
+demo/*.csv
+!demo/sample_*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+

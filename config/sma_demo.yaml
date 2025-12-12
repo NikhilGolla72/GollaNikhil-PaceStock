@@ -1,0 +1,27 @@
+strategy:
+  name: sma_crossover_demo
+  type: sma_crossover
+  symbol: "AAPL"
+  timeframe: 1m
+  entry:
+    fast: 10
+    slow: 20
+    rsi_overbought: 70    # Enable RSI filter (avoid longs when overbought)
+    rsi_oversold: 30
+    vol_threshold: 0.05   # Annualized realized vol filter
+    # exclude_volatile_regime: true
+  exit:
+    stop_loss_pct: 0.5
+    take_profit_pct: 1.0
+risk:
+  position_size: 100
+execution:
+  slippage:
+    type: adaptive
+    base_ticks: 1
+    vol_multiplier: 0.001
+    vol_low: 0.01
+    vol_high: 0.05
+    low_factor: 0.5
+    high_factor: 1.5
+

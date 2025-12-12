@@ -1,0 +1,23 @@
+{
+  "name": "fluxback",
+  "version": "1.0.0",
+  "description": "Regime-Aware C++ Backtesting & Research Engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Use CMake to build the C++ project'",
+    "test": "echo 'Run tests via CMake'"
+  },
+  "keywords": [
+    "backtesting",
+    "trading",
+    "c++",
+    "quantitative-finance"
+  ],
+  "author": "Nikhil Golla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikhilGolla72/GollaNikhil-PaceStock.git"
+  }
+}
+

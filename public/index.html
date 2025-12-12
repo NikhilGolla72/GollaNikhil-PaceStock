@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluxBack - Regime-Aware Backtesting Engine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #5568d3;
+        }
+        
+        .btn-secondary {
+            background: #764ba2;
+        }
+        
+        .btn-secondary:hover {
+            background: #5d3a7e;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 FluxBack</h1>
+            <p class="tagline">Real-time research meets production performance</p>
+            <p class="tagline">A backtester that reasons about market regimes, microstructure, and impact</p>
+        </header>
+        
+        <div class="card">
+            <h2>About FluxBack</h2>
+            <p>FluxBack is a high-performance C++ backtesting engine designed for quantitative trading research. It features:</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>⚡ Fast C++ Core</h3>
+                    <p>Event-driven architecture for high-speed backtesting</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>📊 Technical Indicators</h3>
+                    <p>SMA, EMA, RSI, Realized Volatility, VWAP</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🎯 Strategy DSL</h3>
+                    <p>YAML-based configuration for easy strategy definition</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>💹 Regime Detection</h3>
+                    <p>Automatic market regime classification (TREND/VOLATILE/SIDEWAYS)</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>📈 Comprehensive Analytics</h3>
+                    <p>PnL, Sharpe ratio, max drawdown, win rate, per-regime stats</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🐍 Python Bindings</h3>
+                    <p>Use from Jupyter notebooks via pybind11</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Quick Start</h2>
+            <p>Build and run a backtest:</p>
+            <div class="code-block">
+# Build the project
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release
+
+# Run a backtest
+./fluxback run --strategy ../config/sma_demo.yaml \
+              --data ../demo/aapl_sample.csv \
+              --out ../results/demo.json
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Get Started</h2>
+            <a href="https://github.com/NikhilGolla72/GollaNikhil-PaceStock" class="btn" target="_blank">View on GitHub</a>
+            <a href="https://github.com/NikhilGolla72/GollaNikhil-PaceStock/archive/refs/heads/main.zip" class="btn btn-secondary">Download Source</a>
+        </div>
+        
+        <footer>
+            <p>© 2025 FluxBack | MIT License</p>
+            <p>Built with ❤️ using C++17, CMake, and pybind11</p>
+        </footer>
+    </div>
+</body>
+</html>
+
