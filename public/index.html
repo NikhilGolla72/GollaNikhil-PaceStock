@@ -107,6 +107,7 @@
             opacity: 0.8;
         }
     </style>
+    <script src="app.js"></script>
 </head>
 <body>
     <div class="container">
@@ -199,6 +200,29 @@ cd build
 # Linux/macOS  
 ./run_demo.sh
             </div>
+        </div>
+        
+        <div class="card">
+            <h2>🧪 Try It Online</h2>
+            <p>Run a backtest directly in your browser (requires local setup for full functionality):</p>
+            
+            <div style="margin: 20px 0;">
+                <label><strong>Strategy Configuration (YAML):</strong></label>
+                <textarea id="strategyYaml" rows="10" style="width: 100%; font-family: monospace; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <label><strong>Market Data (CSV):</strong></label>
+                <div style="margin-bottom: 10px;">
+                    <input type="file" id="uploadData" accept=".csv" style="margin-right: 10px;">
+                    <button id="loadSample" class="btn" style="padding: 8px 16px; font-size: 0.9em;">Load Sample Data</button>
+                </div>
+                <textarea id="csvData" rows="8" style="width: 100%; font-family: monospace; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+            </div>
+            
+            <button id="runBacktest" class="btn" style="width: 100%; padding: 15px; font-size: 1.1em; margin-top: 10px;">🚀 Run Backtest</button>
+            
+            <div id="results" style="margin-top: 20px;"></div>
         </div>
         
         <div class="card">
