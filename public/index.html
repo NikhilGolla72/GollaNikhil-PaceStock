@@ -154,18 +154,50 @@
         </div>
         
         <div class="card">
-            <h2>Quick Start</h2>
-            <p>Build and run a backtest:</p>
+            <h2>🚀 Quick Start</h2>
+            <p><strong>Note:</strong> FluxBack is a C++ CLI tool that runs locally on your machine. Clone the repository to get started!</p>
+            
+            <h3 style="margin-top: 20px;">1. Clone the Repository</h3>
             <div class="code-block">
-# Build the project
+git clone https://github.com/NikhilGolla72/GollaNikhil-PaceStock.git
+cd GollaNikhil-PaceStock
+            </div>
+            
+            <h3 style="margin-top: 20px;">2. Build the Project</h3>
+            <p><strong>Windows (PowerShell):</strong></p>
+            <div class="code-block">
+# Install CMake first: winget install Kitware.CMake
+# Then build:
+.\build.ps1
+            </div>
+            
+            <p><strong>Linux/macOS:</strong></p>
+            <div class="code-block">
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release
+            </div>
+            
+            <h3 style="margin-top: 20px;">3. Run a Backtest</h3>
+            <p><strong>Windows:</strong></p>
+            <div class="code-block">
+cd build\Release
+.\fluxback.exe run --strategy ..\..\config\sma_demo.yaml --data ..\..\demo\aapl_sample.csv --out ..\..\results\demo.json
+            </div>
+            
+            <p><strong>Linux/macOS:</strong></p>
+            <div class="code-block">
+cd build
+./fluxback run --strategy ../config/sma_demo.yaml --data ../demo/aapl_sample.csv --out ../results/demo.json
+            </div>
+            
+            <p style="margin-top: 20px;"><strong>Or use the quick demo script:</strong></p>
+            <div class="code-block">
+# Windows
+.\run_demo.ps1
 
-# Run a backtest
-./fluxback run --strategy ../config/sma_demo.yaml \
-              --data ../demo/aapl_sample.csv \
-              --out ../results/demo.json
+# Linux/macOS  
+./run_demo.sh
             </div>
         </div>
         
